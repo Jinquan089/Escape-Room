@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (!($_SESSION["index"]=='check')) {
+        header("Location: ../index.php");
+    }
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +19,6 @@
 
 </head>
 <body class="centradopagina">
-    <?php
-    session_start();
-    if (!($_SESSION["index"]=='check')) {
-        header("Location: ../index.php");
-    }
-    ?>
         <form action="../direccion/Comprovacion.php" method="post">
 
             <h1 class="centrarTexto">192.168.1.20/24</h1>

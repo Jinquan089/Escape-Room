@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (!($_SESSION["pag8"]=='check')) {
+        header("Location: ./pagina8.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +19,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body class="centrarTexto bodyfinal">
-    
-<?php
-    session_start();
-    if (!($_SESSION["pag8"]=='check')) {
-        header("Location: ./pagina8.php");
-    }
-?>
 <form action="../direccion/Comprovacion.php" method="post">
 <div>
     <h1>¡¡¡ Enhorabuena has ganado el juego !!!</h1>

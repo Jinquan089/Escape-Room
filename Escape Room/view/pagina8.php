@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (!($_SESSION["pag7"]=='check')) {
+        header("Location: ./pagina7.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +19,6 @@
 
 </head>
 <body class="centradopagina">
-<?php
-    session_start();
-    if (!($_SESSION["pag7"]=='check')) {
-        header("Location: ./pagina7.php");
-    }
-?>
 <div style="text-align:center;">
 <form action="../direccion/Comprovacion.php" method="post">
     <h1>¿Cuántos bits tiene el host?</h1>

@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (!($_SESSION["pag2"]=='check')) {
+        header("Location: ./pagina2.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +19,6 @@
 
 </head>
 <body class="centradopagina">
-<?php
-    session_start();
-    if (!($_SESSION["pag2"]=='check')) {
-        header("Location: ./pagina2.php");
-    }
-?>
 <form action="../direccion/Comprovacion.php" method="post">
 <div class="column-l">
     <h1 id="pagina3" class="textc">172.15.24.100</h1>

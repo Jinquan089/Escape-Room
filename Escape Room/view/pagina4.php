@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (!($_SESSION["pag3"]=='check')) {
+        header("Location: ./pagina3.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +20,6 @@
 
 </head>
 <body class="centradopagina" style="text-align: center;">
-<?php
-    session_start();
-    if (!($_SESSION["pag3"]=='check')) {
-        header("Location: ./pagina3.php");
-    }
-?>
         <h1 class="textotamaño">¿De que clase son las IPs?</h1>
         <form action="../direccion/Comprovacion.php" method="post">
         <table style="margin: 0 auto;">

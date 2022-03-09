@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (!($_SESSION["pag4"]=='check')) {
+        header("Location: ./pagina4.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +19,6 @@
 
 </head>
 <body class="centradopagina">
-<?php
-    session_start();
-    if (!($_SESSION["pag4"]=='check')) {
-        header("Location: ./pagina4.php");
-    }
-?>
 <form action="../direccion/Comprovacion.php" method="post">
 <div style="text-align:center;">
     <h1>¿Las IPs son asignables?</h1>

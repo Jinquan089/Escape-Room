@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if (!($_SESSION["pag6"]=='check')) {
+        header("Location: ./pagina6.php");
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +19,6 @@
 
 </head>
 <body class="centradopagina" class="centrarTexto" class="body7">
-<?php
-    session_start();
-    if (!($_SESSION["pag6"]=='check')) {
-        header("Location: ./pagina6.php");
-    }
-?>
 <div style="text-align:center;">
 <td><br></td>
     <td><br></td>
